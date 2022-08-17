@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title> Document </title>
+        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css">
+        <script src = "https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+        <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+
+        <style type="text/css">
+            .ui-widget-header,.ui-state-default, ui-button {
+               background: blue;
+               border: 1px solid #131312;
+               color: #FFFFFF;
+               font-weight: bold;
+            }
+
+            #button {
+                        background-color: white;
+                        border-radius: 10px;
+                        font-size: 14px;
+            }
+
+            #button:hover {
+
+                        background-color: royalblue;
+            }
+         </style>
+
+        <script>
+            $(document).ready(function(){
+                $("#div").dialog({
+                    autoOpen: false,
+                });
+                $("#button").click(function(){
+                    $("#div").dialog("open");
+                });
+            });
+        </script>
+
+</head>
+<body>
+        <div id="div" title="Open Your Favourite Site..">
+
+            <a href="https://www.google.com/">Google</a> <hr>
+            <a href="https://www.facebook.com/">Facebook</a> <hr>
+            <a href="https://www.instagram.com/">Instagram</a>
+        </div>
+        <button id="button"> Click Here..</button>
+</body>
+</html>
